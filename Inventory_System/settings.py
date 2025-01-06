@@ -23,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.environ.get("SECRET_KEY")  # 'django-insecure-5d^(dwhy+1z5ar+q_x%tfe($i#(wgvh$(8kr9)#9b-&*-+9a^#'  
+SECRET_KEY =  os.environ.get("SECRET_KEY")  # 'django-insecure-5d^(dwhy+1z5ar+q_x%tfe($i#(wgvh$(8kr9)#9b-&*-+9a^#'  
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.environ.get("DEBUG", "False").lower() == "true" # DEBUG default to False but i'm checking if it's True regardless of the case
@@ -88,6 +88,7 @@ DATABASES = {
     }
 }
 
+# DATABASES ["default"] = dj_database_url.parse("postgresql://capstone_alx_user:lYVoziZvoK0FfCKOCx71XXFW85PqhW3h@dpg-cttr1ol2ng1s7397rh10-a.oregon-postgres.render.com/capstone_alx")
 database_url = os.environ.get("DATABASE_URL")
 DATABASES["default"] = dj_database_url.parse(database_url)
 
