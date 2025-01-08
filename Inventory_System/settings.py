@@ -44,7 +44,6 @@ INSTALLED_APPS = [
     'Product.apps.ProductConfig',
     'rest_framework',
     'rest_framework_simplejwt',
-
 ]
 
 MIDDLEWARE = [
@@ -80,7 +79,7 @@ WSGI_APPLICATION = 'Inventory_System.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
-
+    # It's a CODED Something
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
